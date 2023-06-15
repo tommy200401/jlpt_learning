@@ -7,6 +7,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import useState from 'react';
 
 const multipleChoice = []
 const choices = ['a', 'b', 'c', 'd']
@@ -15,6 +16,8 @@ for (let i = 0; i < 4; i++) {
   <FormControlLabel value={choices[i]} control={<Radio />} label={choices[i]} />
   )
 }
+
+const [selection, setSelection] = useState([]);
 
 function App() {
   return (
